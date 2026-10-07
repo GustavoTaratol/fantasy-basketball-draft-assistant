@@ -1,0 +1,8 @@
+<section id="history" class="view">
+  <div class="hero"><div class="hero-main"><div class="eyebrow">Complete draft record</div><h1>Draft history</h1><p>Every selection is numbered and can be corrected without losing later picks.</p></div><div class="pick-card"><span>Selections entered</span><strong id="historyTotal">0</strong></div><div class="pick-card"><span>Current round</span><strong id="currentRound">1</strong></div></div>
+  <section class="panel"><div class="panel-head"><h2>Pick log</h2><div class="tools"><button id="exportCsv" class="btn compact">Export CSV</button><button id="backupDraft" class="btn compact">Download backup</button></div></div><div class="table-wrap"><table><thead><tr><th>Pick</th><th>Round</th><th>Drafting slot</th><th>Player</th><th>Team</th><th>Pos</th><th>Owner</th><th>Action</th></tr></thead><tbody id="historyRows"></tbody></table></div></section>
+</section>
+<div id="compareBar" class="compare-bar"><span id="compareCount">0 selected</span><button id="openCompare" class="btn compact">Compare players</button><button id="clearCompare" class="btn compact">Clear</button></div>
+<div id="compareModal" class="modal" aria-hidden="true"><div class="modal-card"><div class="panel-head"><h2>Player comparison</h2><button id="closeCompare" class="action">Close</button></div><div id="compareGrid" class="compare-grid"></div></div></div>
+<input id="restoreInput" type="file" accept="application/json" hidden>
+<input id="csvInput" type="file" accept=".csv,text/csv" hidden>
