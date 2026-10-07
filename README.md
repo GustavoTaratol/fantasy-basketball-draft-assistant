@@ -12,6 +12,9 @@ The distributable application is a single standalone HTML file:
 It runs locally in a modern browser and does not require an internet
 connection.
 
+The same generated application is written to `docs/index.html` for GitHub
+Pages. Configure Pages to deploy from the `main` branch and `/docs` folder.
+
 ## League configuration
 
 - 10 teams

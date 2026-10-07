@@ -9,6 +9,7 @@ import pandas as pd
 
 SOURCE = Path('/Users/MSWTeam/Downloads/BBL_Draft_Assistant.xlsx')
 OUTPUT = Path('/Users/MSWTeam/Documents/New project/Deliverables/BBL Draft Assistant/BBL_Draft_Assistant_Offline.html')
+PAGES_OUTPUT = Path(__file__).parent / 'docs' / 'index.html'
 
 wbv = load_workbook(SOURCE, data_only=True, read_only=False)
 db = wbv['PLAYER DATABASE']
@@ -285,4 +286,7 @@ template = template.replace('</main>', additions + '\n</main>')
 template = re.sub(r'<script>.*?</script>', lambda _: '<script>\n' + app_js + '\n</script>', template, flags=re.S)
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 OUTPUT.write_text(template, encoding='utf-8')
+PAGES_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+PAGES_OUTPUT.write_text(template, encoding='utf-8')
 print(OUTPUT)
+print(PAGES_OUTPUT)
